@@ -1,57 +1,45 @@
 import * as React from "react"
 import styled from 'styled-components'
 import Layout from "../../globalStyles"
-
+import Hero from '../../components/hero'
 
 const Section = styled.div`
 height: 75vw;
 width: 100%;
 
-`
-
-const Hero = styled.div`
-background: lightgrey;
-height: 100%;
-`
-const About = styled.div`
-background: lightblue;
-height: 100%;
-
-`
-const Projects = styled.div`
-
-background: lightcyan;
-height: 100%;
-`
-const Contact = styled.div`
-background: lightsalmon;
-height: 100%;
+.hero, .about, .projects, .contact {
+  background-color: white;
+  height: 100%;
+}
 
 `
 
-const IndexPage = () => {
+
+const IndexPage = ({heroContent}) => {
+
   return(
     <>
     <Layout/>
     <Section>
-  <Hero>
-    <h1>hero </h1>
-  </Hero>
+  <div className="hero" id='hero'>
+    <Hero/>
+    <p>hero</p>
+  </div>
   </Section>
   <Section>
-  <About>
-  <h1>About </h1>
-  </About>
+  <div className ="about"id='about'>
+    <p>about</p>
+  </div>
   </Section>
   <Section>
-  <Projects>
-  <h1>Project </h1>
-  </Projects>
+  <div className ="projects" id='projects'>
+<p>projects</p>
+  </div>
   </Section>
   <Section>
-  <Contact>
-  <h1>Contact </h1>
-  </Contact>
+  <div  className="contact" id='contact'>
+<p>contact</p>
+  </div>
   </Section>
 
 

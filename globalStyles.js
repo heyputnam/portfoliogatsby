@@ -1,5 +1,6 @@
 // creating global styles
 import * as React from 'react'
+import NavBar from './components/nav';
 
 const { createGlobalStyle } = require("styled-components");
 
@@ -58,6 +59,7 @@ const Layout = ({children}) =>{
     return(
         <>
         <GlobalStyle/>
+        <NavBar/>
     {children}
     </>
     )
