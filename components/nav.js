@@ -1,10 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import {AnchorLink } from 'gatsby-plugin-anchor-links'
+import {AnchorLink } from 
+'gatsby-plugin-anchor-links'
+import menu from '../src/images/menu.png'
 const Header = styled.div`
 background: #F6DFEE;
 width: 100%;
-height: 2rem;
+height: 2.5rem;
 position: fixed;
 top: 0;
 left: 0;
@@ -40,7 +42,7 @@ a{
 }
 li:hover{
 
-    transform: scale(1.3);
+    transform: scale(1.4);
     transition: scale 2s ease-in-out;
 }
 
@@ -62,11 +64,23 @@ li:hover{
             right: 0;
             margin-right: 1.5rem;
         }
+        img{
+            height: 25px;
+            width: 25px;
+            margin-top: 5px;
+        }
+
+        img:hover{
+            transform: scale(1.4);
+            margin-top: 0.5rem;
+
+        }
     }
     .menu{
    
         background: lightgreen;
         width: 9rem;
+        margin-top: 2rem;
         li a{
             display: none;
            
@@ -77,8 +91,8 @@ li:hover{
             display: flex;
             flex-direction: column;
         
-            margin-top: 2rem;
-
+            margin-top: 0.4rem;
+            margin-bottom: 0.4rem;
             &:hover{
                 transform: scale(1.2);
                 transition: all 200ms ease-in-out;
@@ -126,12 +140,13 @@ const NavBar = () => {
           
               <div className="regular">
              <li><AnchorLink to="/#about">about</AnchorLink></li> 
+             <li><AnchorLink to="/#resume">resume</AnchorLink></li> 
           <li><AnchorLink to="/#projects">projects</AnchorLink></li>
           <li><AnchorLink to="/#contact">contact</AnchorLink></li>
           </div>
          <div className="mobile">
              <div className="menu">
-                 <p>:</p>
+              <p><img src={menu}></img></p>
           <li><a href="/#about">about</a></li> 
           <li><a href="/#contact">contact</a></li>
           <li><a href="/#projects">projects</a></li>
