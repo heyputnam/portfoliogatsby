@@ -27,7 +27,7 @@ body{
     padding: 0;
     border: 0;
     outline: 0;
-    background: var(--black);
+    background: white;
     overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6{

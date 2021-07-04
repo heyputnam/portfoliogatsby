@@ -1,15 +1,15 @@
 import * as React from 'react'
 import styled from 'styled-components'
-
+import {AnchorLink } from 'gatsby-plugin-anchor-links'
 const Header = styled.div`
-background: lightgreen;
+background: #F6DFEE;
 width: 100%;
 height: 2rem;
 position: fixed;
 top: 0;
 left: 0;
 padding-top: 1rem;
-
+z-index: 1;
 
 `
  const Nav = styled.div`
@@ -18,6 +18,7 @@ margin-top: 0.5rem;
 right: 0;
 position: absolute;
 display: flex;
+z-index: 1;
 
 .regular{
     display: flex;
@@ -25,14 +26,17 @@ display: flex;
 .mobile{
     display: none;
 }
-li:not(:last-child){
-  margin-right: 2rem;
-}
 
 li{
-   
+    
+   margin-right: 2rem;
   list-style: none;
 
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 li:hover{
 
@@ -88,16 +92,42 @@ li:hover{
    
 }
 
+
+
  `
+
+ const Left = styled.div`
+ position: absolute;
+ top: 0;
+ left: 0;
+
+ z-index: 1;
+ font-size: 12px;
+
+ a{
+     color: black;
+ }
+
+ h1:hover{
+    transform: scale(1.1);
+    margin-left: 0.7rem;
+    }
+ `
+
+
 const NavBar = () => {
     return(
         <>
       <Header>
+      <Left>
+   <AnchorLink to="/#hero"><h1>Hailey Putnam.</h1></AnchorLink>
+              </Left>
           <Nav>
+          
               <div className="regular">
-             <li><a href="/#about">about</a></li> 
-          <li><a href="/#contact">contact</a></li>
-          <li><a href="/#projects">projects</a></li>
+             <li><AnchorLink to="/#about">about</AnchorLink></li> 
+          <li><AnchorLink to="/#projects">projects</AnchorLink></li>
+          <li><AnchorLink to="/#contact">contact</AnchorLink></li>
           </div>
          <div className="mobile">
              <div className="menu">
