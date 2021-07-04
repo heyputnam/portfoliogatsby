@@ -3,8 +3,12 @@ import styled from 'styled-components'
 import {AnchorLink } from 
 'gatsby-plugin-anchor-links'
 import menu from '../src/images/menu.png'
+import mail from '../src/images/mail.png'
+import lightbulb from '../src/images/lightbulb.png'
+import resume from '../src/images/resume.png'
+import about from '../src/images/about.png'
 const Header = styled.div`
-background: #F6DFEE;
+background: white;
 width: 100%;
 height: 2.5rem;
 position: fixed;
@@ -36,6 +40,15 @@ li{
 
 }
 
+img{
+    height: 25px;
+    width: 25px;
+
+  
+}
+img:hover{
+   filter:  drop-shadow(0 0 0.15rem rgb(1, 127, 254))
+}
 a{
     text-decoration: none;
     color: black;
@@ -113,10 +126,10 @@ li:hover{
  const Left = styled.div`
  position: absolute;
  top: 0;
- left: 0;
-
+ left: 5px;
+margin-top: 7px;
  z-index: 1;
- font-size: 12px;
+ font-size: 10px;
 
  a{
      color: black;
@@ -139,10 +152,10 @@ const NavBar = () => {
           <Nav>
           
               <div className="regular">
-             <li><AnchorLink to="/#about">about</AnchorLink></li> 
-             <li><AnchorLink to="/#resume">resume</AnchorLink></li> 
-          <li><AnchorLink to="/#projects">projects</AnchorLink></li>
-          <li><AnchorLink to="/#contact">contact</AnchorLink></li>
+             <li><AnchorLink to="/#about"><img src={about}/></AnchorLink></li> 
+             <li><AnchorLink to="/#resume"><img src={resume}/></AnchorLink></li> 
+          <li><AnchorLink to="/#projects"><img src={lightbulb}/></AnchorLink></li>
+          <li><AnchorLink to="/#contact"><img src={mail}/></AnchorLink></li>
           </div>
          <div className="mobile">
              <div className="menu">
