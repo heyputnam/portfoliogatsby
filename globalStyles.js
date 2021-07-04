@@ -1,5 +1,6 @@
 // creating global styles
 import * as React from 'react'
+import NavBar from './components/nav';
 
 const { createGlobalStyle } = require("styled-components");
 
@@ -8,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 :root{
     --white: #ffffff;
     --black: #000000;
+    --font: @import url('https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap');
 }
 *,*::before,*::after{
     margin: 0;
@@ -26,7 +28,7 @@ body{
     padding: 0;
     border: 0;
     outline: 0;
-    background: var(--black);
+    background: white;
     overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6{
@@ -58,6 +60,7 @@ const Layout = ({children}) =>{
     return(
         <>
         <GlobalStyle/>
+        <NavBar/>
     {children}
     </>
     )
