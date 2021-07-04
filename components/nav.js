@@ -7,8 +7,9 @@ import mail from '../src/images/mail.png'
 import lightbulb from '../src/images/lightbulb.png'
 import resume from '../src/images/resume.png'
 import about from '../src/images/about.png'
+
 const Header = styled.div`
-background: white;
+background:white;
 width: 100%;
 height: 2.5rem;
 position: fixed;
@@ -16,9 +17,8 @@ top: 0;
 left: 0;
 padding-top: 1rem;
 z-index: 1;
-
 `
- const Nav = styled.div`
+const Nav = styled.div`
 margin-top: 0.5rem;
  top: 0;
 right: 0;
@@ -47,11 +47,12 @@ img{
   
 }
 img:hover{
-   filter:  drop-shadow(0 0 0.15rem rgb(1, 127, 254))
+   filter:  drop-shadow(3px 3px 0.15rem rgb(246, 254, 20))
 }
 a{
     text-decoration: none;
     color: black;
+    font-family: 'Give You Glory' , cursive;
 }
 li:hover{
 
@@ -90,10 +91,13 @@ li:hover{
         }
     }
     .menu{
-   
-        background: lightgreen;
-        width: 9rem;
+        text-align: center;
+        background: white;
+        width: 12rem;
         margin-top: 2rem;
+        /* margin-right: -5rem; */
+
+
         li a{
             display: none;
            
@@ -109,7 +113,7 @@ li:hover{
             &:hover{
                 transform: scale(1.2);
                 transition: all 200ms ease-in-out;
-                margin-left: 2.5rem;
+                margin-left: 1.5rem;
             }
         }
 
@@ -124,6 +128,7 @@ li:hover{
  `
 
  const Left = styled.div`
+ 
  position: absolute;
  top: 0;
  left: 5px;
@@ -133,6 +138,11 @@ margin-top: 7px;
 
  a{
      color: black;
+ 
+ }
+ h1{
+    font-family: 'Give You Glory' , cursive;
+    font-weight: 100;
  }
 
  h1:hover{
@@ -148,9 +158,8 @@ const NavBar = () => {
       <Header>
       <Left>
    <AnchorLink to="/#hero"><h1>Hailey Putnam.</h1></AnchorLink>
-              </Left>
+    </Left>
           <Nav>
-          
               <div className="regular">
              <li><AnchorLink to="/#about"><img src={about}/></AnchorLink></li> 
              <li><AnchorLink to="/#resume"><img src={resume}/></AnchorLink></li> 

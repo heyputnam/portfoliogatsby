@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 :root{
     --white: #ffffff;
     --black: #000000;
+    --font: @import url('https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap');
 }
 *,*::before,*::after{
     margin: 0;
