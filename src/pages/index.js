@@ -40,7 +40,8 @@ const IndexPage = ({name}) => {
   </Section>
   <Section className="projects" id="projects" style={{background: 'white'}}>
 <Content name="projects"/>
- links to all projects, with preview photo grip then on click goes to section about the projects 
+<Projects/>
+ {/* links to all projects, with preview photo grip then on click goes to section about the projects  */}
   </Section>
   <Section className="contact" id="contact" style={{background: 'white'}}>
     <Content name="contact"/>
