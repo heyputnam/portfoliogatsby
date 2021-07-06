@@ -1,37 +1,25 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import kayotime from '../src/images/kayotime.png'
+import Tile from './tile'
 
-
-const Container =styled.div`
-
-
-`
 const Project =styled.div`
-
-
+display: grid;
+grid-template-columns: 33% 33% 33%;
 `
-const Title =styled.div`
 
 
-`
-const Description =styled.div`
-
-
-`
-const Projects = () => {
+const Projects = ({link, image, title}) => {
     return (
         <>
-        <Container>
             <Project>
-                <Title>
-        <img></img>
-        <h1></h1>
-                </Title>
-                <Description>
-        <p></p>
-                </Description>
+  <Tile
+  title="Kayo Time Details"
+  link="/kayotime"
+  img={kayotime}/>
+  <Tile/>
+
             </Project>
-        </Container>
         </>
     )
 }
