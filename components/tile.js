@@ -4,13 +4,17 @@ import kayotime from '../src/images/kayotime.png'
 
 const Container =styled.div`
 height: 12em;
-width: 440px;
+width: 420px;
 cursor: pointer;
-margin: 0.5rem;
-
+/* margin: rem; */
+overflow: hidden;
+img{
+    
+}
 &:hover{
     img{
         filter: blur(2px);
+    
     }
     h1{
         filter: blur(0);
