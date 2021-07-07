@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Layout from "../../globalStyles"
 import Content from '../../components/content'
 import Projects from "../../components/projects"
+import About from '../../components/about'
 // sets each section to be a full webpage height and width 
 const Section = styled.div`
 height: 100vh;
@@ -34,9 +35,9 @@ const IndexPage = ({name}) => {
   </Section>
   <Section className="about" id="about" style={{background: 'white'}}>
     <Content name="about">
-    all about me, im including memes forsure
+  
     </Content>
-
+    <About/>
   </Section>
   <Section className="projects" id="projects" style={{background: 'white'}}>
 <Content name="projects"/>

@@ -6,6 +6,7 @@ import rods from '../src/images/rods.png'
 import tarot from '../src/images/tarot.png'
 import lowrent from '../src/images/lowrent.png'
 import clouds from '../src/images/clouds.gif'
+import gatsbyt from '../src/images/gatsbyt.png'
 const Project =styled.div`
 display: grid;
 grid-template-columns: 33% 33% 33%;
@@ -37,6 +38,11 @@ const Projects = ({link, image, title}) => {
   title="Parallax Scroll"
   link="/scroll"
   img={clouds}
+  />
+  <Tile
+  title="oh fck tutorials"
+  link="/ohfck"
+  img={gatsbyt}
   />
             </Project>
         </>
